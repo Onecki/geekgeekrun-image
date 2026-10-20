@@ -1,0 +1,44 @@
+{
+  "combineRecommendJobFilterType": 1,
+  "anyCombineRecommendJobFilter": {
+    "cityList": [],
+    "salaryList": [],
+    "experienceList": [],
+    "degreeList": [],
+    "scaleList": [],
+    "industryList": []
+  },
+  "staticCombineRecommendJobFilterConditions": [],
+  "isSkipEmptyConditionForCombineRecommendJobFilter": false,
+  "expectJobRegExpStr": "",
+  "expectJobNameRegExpStr": "",
+  "expectJobTypeRegExpStr": "",
+  "expectJobDescRegExpStr": "",
+  "jobNotMatchStrategy": 1,
+  "jobNotActiveStrategy": 1,
+  "markAsNotActiveSelectedTimeRange": 7,
+  "expectCityList": [],
+  "expectCityNotMatchStrategy": 3,
+  "strategyScopeOptionWhenMarkJobCityNotMatch": 2,
+  "jobDetailRegExpMatchLogic": 1,
+  "autoReminder": {
+    "throttleIntervalMinutes": 10,
+    "rechatLimitDay": 21,
+    "geminiApiKey": "",
+    "rechatContentSource": 1,
+    "recentMessageQuantityForLlm": 8,
+    "rechatLlmFallback": 1,
+    "onlyRemindBossWithExpectJobType": true
+  },
+  "jobSourceList": [
+    {
+      "type": "expect",
+      "enabled": true
+    }
+  ],
+  "isSageTimeEnabled": true,
+  "sageTimeOpTimes": 100,
+  "sageTimePauseMinute": 15,
+  "blockCompanyNameRegExpStr": "",
+  "fieldsForUseCommonConfig": {}
+}

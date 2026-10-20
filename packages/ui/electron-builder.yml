@@ -1,0 +1,52 @@
+appId: com.geekgeekrun.greeting.standalone
+productName: GeekGeekRun Greeting
+directories:
+  buildResources: build
+icon: resources/icon.png
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!scripts/*'
+  - '!tests/**'
+  - '!dist/**'
+  - '!**/*.{map,ts,flow,scss,sass,less}'
+  - '!node_modules/date-fns/esm/*'
+  - '!node_modules/highlight.js/{styles,scss}/*'
+  - '!node_modules/typeorm/browser/*'
+asarUnpack:
+  - 'resources/**'
+  - 'node_modules/better-sqlite3/**'
+win:
+  executableName: geekgeekrun-greeting
+  signAndEditExecutable: false
+nsis:
+  artifactName: ${name}_${version}_${arch}_setup.${ext}
+  shortcutName: GeekGeekRun Image Greeting
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+  deleteAppDataOnUninstall: false
+  runAfterFinish: false
+mac:
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  notarize: false
+dmg:
+  artifactName: ${name}_${version}_${arch}.${ext}
+linux:
+  artifactName: ${name}_${version}_${arch}.${ext}
+  maintainer: GeekGeekRun
+  category: Utility
+npmRebuild: false
+publish:
+  provider: generic
+  url: https://example.com/auto-updates
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/

@@ -1,0 +1,41 @@
+{
+  "name": "geekgeekrun",
+  "private": true,
+  "version": "1.0.0",
+  "description": "geek-auto-start-chat-with-boss",
+  "module": "./main/index.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node ./packages/run-core-of-geek-auto-start-chat-with-boss/daemon-main.mjs"
+  },
+  "author": "geekgeekrun",
+  "license": "ISC",
+  "dependencies": {
+    "@geekgeekrun/puppeteer-extra-plugin-laodeng": "workspace:*",
+    "cheerio": "1.0.0-rc.12",
+    "dayjs": "^1.11.10",
+    "json5": "^2.2.3",
+    "minimist": "^1.2.8",
+    "puppeteer": "24.19.0",
+    "puppeteer-extra": "3.3.6",
+    "puppeteer-extra-plugin-anonymize-ua": "2.4.6",
+    "puppeteer-extra-plugin-stealth": "2.11.2",
+    "rimraf": "^3.0.2",
+    "tapable": "^2.2.1"
+  },
+  "devDependencies": {
+    "semver": "^7.6.0"
+  },
+  "volta": {
+    "node": "20.16.0"
+  },
+  "engines": {
+    "pnpm": ">=8.15.9 <9.0.0"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "find-chrome-bin@2.0.4": "patches/find-chrome-bin@2.0.4.patch",
+      "puppeteer-extra-plugin-anonymize-ua@2.4.6": "patches/puppeteer-extra-plugin-anonymize-ua@2.4.6.patch"
+    }
+  }
+}

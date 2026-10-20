@@ -1,0 +1,26 @@
+node_modules
+database.sqlite
+.env.local
+
+# Local credentials, personal runtime data and build output must stay private.
+.env
+.env.*
+!.env.example
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.log
+/.geekgeekrun/
+/config/
+/storage/
+/test-data/
+/release/
+/release[0-9]*/
+/backups/
+task.lock
+
+# Unused preview artwork is not part of the public documentation.
+/docs/images/readme-hero*.png
+

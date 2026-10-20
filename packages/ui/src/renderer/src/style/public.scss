@@ -1,0 +1,23 @@
+html, body {
+  --monospace-font-family: Monaco, Consolas, Menlo;
+  --sans-serif-font-family: 'PingFang SC', 'Microsoft Yahei', Helvetica, Arial;
+  font-family: var(--monospace-font-family), var(--sans-serif-font-family);
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+button, input, textarea {
+  font-family: inherit;
+}
+#app {
+  position: absolute;
+  inset: 0;
+}
+a {
+  text-decoration: none;
+  &:link,
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}

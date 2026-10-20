@@ -1,0 +1,13 @@
+{
+  "name": "@geekgeekrun/dingtalk-plugin",
+  "private": true,
+  "version": "1.0.0",
+  "description": "@geekgeekrun/dingtalk-plugin",
+  "module": "./index.mjs",
+  "type": "module",
+  "scripts": {
+  },
+  "author": "geekgeekrun",
+  "license": "ISC",
+  "dependencies": {}
+}
